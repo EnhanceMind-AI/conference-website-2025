@@ -1,1 +1,1 @@
-The official Github repository for Emai Conference 2025.
+The official Github repository for Emai Conference 2025 Website.
