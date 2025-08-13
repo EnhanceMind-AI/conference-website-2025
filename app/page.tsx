@@ -8,7 +8,7 @@ import Sponsors from "@/components/sections/Sponsors";
 
 export default function Home() {
   return (
-    <div>
+    <div className="bg-[#0F0A43]">
       <Hero />
       <About />
       <Speakers />
