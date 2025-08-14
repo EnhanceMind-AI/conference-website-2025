@@ -35,29 +35,29 @@ export default function Hero() {
             <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-3 gap-6 my-12">
                 <Card className="bg-[#FBAE04] rounded-bl-xl rounded-tr-xl">
                     <CardContent className="flex flex-row items-center gap-3">
-                        <p className="text-lg">All Invited</p>
+                        <p className="text-lg font-medium">All Invited</p>
                         <div className="w-0.5 h-10 bg-white mx-2" />
-                        <User className="size-9" />
+                        <User className="size-10" />
                     </CardContent>
                 </Card>
 
                 <Card className="bg-[#FBAE04] rounded-bl-xl rounded-tr-xl">
                     <CardContent className="flex flex-row items-center gap-3">
-                        <p className="text-lg">September 2025</p>
+                        <p className="text-lg font-medium">September 2025</p>
                         <div className="w-0.5 h-10 bg-white mx-2" />
-                        <CalendarDays className="size-9" />
+                        <CalendarDays className="size-10" />
                     </CardContent>
                 </Card>
 
                 <Card className="bg-[#FBAE04] rounded-bl-xl rounded-tr-xl">
                     <CardContent className="flex flex-row items-center gap-3">
-                        <p className="text-lg">Dar Es Salaam</p>
+                        <p className="text-lg font-medium">Dar Es Salaam</p>
                         <div className="w-0.5 h-10 bg-white mx-2" />
-                        <MapPinned className="size-9" />
+                        <MapPinned className="size-10" />
                     </CardContent>
                 </Card>
             </div>
-
+            
         </section>
     )
 }
