@@ -25,7 +25,7 @@ export default function About() {
                     <h1 className='text-left text-4xl text-white mb-2'>About EMAI Conference</h1>
 
                     <p className='text-white text-justify text-lg mb-5'>EnhanceMind AI(emAI) Conference is an event prepared and hosted by CameLabs to explore the fundamentals, advances, and breakthroughs in Artificial Intelligence.</p>
-                    <p className='text-white text-justify text-lg'>The EnhanceMind AI Conference is a premier event for professionals in the field of Artificial Intelligence, Machine Learning, and Data Science.
+                    <p className='text-white text text-lg'>The EnhanceMind AI Conference is a premier event for professionals in the field of Artificial Intelligence, Machine Learning, and Data Science.
                         The conference is expected to attract diverse attendees from various industries such as technology, healthcare, finance, and more.
                         Attendees include C-level executives, researchers, data scientists, engineers, and developers who are looking to stay on the cutting edge of the latest advancements in AI technology.
                         The conference also attracts start-up companies and entrepreneurs who are interested in exploring new opportunities in the AI industry.
@@ -48,7 +48,7 @@ export default function About() {
                                             start={0}
                                             end={stat.value}
                                             duration={4} // Animation time in seconds
-                                            delay={1}
+                                            delay={0.5}
                                         />
                                     ) : (
                                         0 // Static zero before entering view
@@ -75,9 +75,9 @@ export default function About() {
 
             <div className="exCards">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
-                    <Card className="rounded-sm bg-[#FBAE04]">
+                    <Card className="rounded-sm bg-[#FBAE04] cursor-pointer">
                         <CardHeader>
-                            <CardTitle className="text-lg">Inspiring Talks & Panel Sessions</CardTitle>
+                            <CardTitle className="text-xl text-center">Inspiring Talks & Panel Sessions</CardTitle>
                         </CardHeader>
                         <CardContent>
                             <p>
@@ -87,9 +87,9 @@ export default function About() {
                         </CardContent>
                     </Card>
 
-                    <Card className="rounded-sm bg-[#FBAE04]">
+                    <Card className="rounded-sm bg-[#FBAE04] cursor-pointer">
                         <CardHeader>
-                            <CardTitle className="text-lg">Innovative Project Showcases</CardTitle>
+                            <CardTitle className="text-xl text-center">Innovative Project Showcases</CardTitle>
                         </CardHeader>
                         <CardContent>
                             <p>
@@ -100,9 +100,9 @@ export default function About() {
                         </CardContent>
                     </Card>
 
-                    <Card className="rounded-sm bg-[#FBAE04]">
+                    <Card className="rounded-sm bg-[#FBAE04] cursor-pointer">
                         <CardHeader>
-                            <CardTitle className="text-lg">Hands-On Technical Workshops</CardTitle>
+                            <CardTitle className="text-xl text-center">Hands-On Technical Workshops</CardTitle>
                         </CardHeader>
                         <CardContent>
                             <p>

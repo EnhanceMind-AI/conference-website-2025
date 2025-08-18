@@ -5,7 +5,7 @@ import Footer from "@/components/public/Footer";
 
 export const metadata: Metadata = {
   title: "EnhanceMind AI",
-  description: "Home Page",
+  description: "Home",
 };
 
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
