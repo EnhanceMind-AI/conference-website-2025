@@ -54,11 +54,6 @@ export default function Navbar() {
                             Previous
                         </Link>
                     </li>
-                    <li>
-                        <Link href="/#" className="text-white hover:text-[#FBAE04]">
-                            Contact Us
-                        </Link>
-                    </li>
                 </ul>
 
                 {/* Mobile Menu Button */}
@@ -88,9 +83,6 @@ export default function Navbar() {
                                 </Link>
                                 <Link href="/#" className="text-white hover:text-[#FBAE04]">
                                     Previous
-                                </Link>
-                                <Link href="/#" className="text-white hover:text-[#FBAE04]">
-                                    Contact Us
                                 </Link>
                             </div>
                         </SheetContent>
