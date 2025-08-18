@@ -1,8 +1,12 @@
 'use client'
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import CountUp from "react-countup";
-import { useInView } from "react-intersection-observer";
+import {
+    Card, CardContent, CardHeader, CardTitle 
+} from "@/components/ui/card"
+import Image from "next/image"
+import CountUp from "react-countup"
+import { useInView } from "react-intersection-observer"
+import emaiImage from "../../public/emai-crap.jpg"
 
 const stats = [
     { label: "Speakers", value: 25 },
@@ -20,24 +24,30 @@ export default function About() {
 
     return (
         <div ref={ref} className='max-w-7xl mx-auto px-4'>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 my-12">
                 <div className="about">
                     <h1 className='text-left text-4xl text-white mb-2'>About EMAI Conference</h1>
 
                     <p className='text-white text-justify text-lg mb-5'>EnhanceMind AI(emAI) Conference is an event prepared and hosted by CameLabs to explore the fundamentals, advances, and breakthroughs in Artificial Intelligence.</p>
-                    <p className='text-white text text-lg'>The EnhanceMind AI Conference is a premier event for professionals in the field of Artificial Intelligence, Machine Learning, and Data Science.
+                    <p className='text-white text-lg'>The EnhanceMind AI Conference is a premier event for professionals in the field of Artificial Intelligence, Machine Learning, and Data Science.
                         The conference is expected to attract diverse attendees from various industries such as technology, healthcare, finance, and more.
                         Attendees include C-level executives, researchers, data scientists, engineers, and developers who are looking to stay on the cutting edge of the latest advancements in AI technology.
                         The conference also attracts start-up companies and entrepreneurs who are interested in exploring new opportunities in the AI industry.
                     </p>
                 </div>
                 <div className="image">
-                    <h1 className='text-white'>Image Goes Here</h1>
+                    <Image
+                        src={emaiImage}
+                        alt="crap emai image"
+                        className="object-fill rounded-3xl shadow-2xl hover:scale-105 transition-transform"
+                        width={600}
+                        height={600}
+                    />
                 </div>
             </div>
 
             <div className="insights-card">
-                <div className="grid grid-cols-1 sm:grid-cols-4 gap-6 mx-32 my-20">
+                <div className="grid grid-cols-1 sm:grid-cols-4 gap-6 mx-auto my-20">
                     {stats.map((stat, i) => (
                         <Card key={i} className="rounded-2xl bg-[#FBAE04] shadow-lg flex items-center justify-center">
                             <CardContent className="flex flex-col items-center">
@@ -69,13 +79,13 @@ export default function About() {
                     At the heart of every great conference is the chance to connect  and this one is no different.
                     Whether you&apos;re a curious student, a seasoned engineer, or an industry expert, the Emai AI Conference offers a rare space to meet fellow thinkers, makers, and visionaries.
                     Share ideas over coffee, find potential collaborators, or simply get inspired by the people around you.
-                    Because sometimes, the best breakthroughs happen between sessions. Other stuff to expect Include......
+                    Because sometimes, the best breakthroughs happen between sessions. Other stuff to expect Include......<br></br>
                 </p>
             </div>
 
             <div className="exCards">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
-                    <Card className="rounded-sm bg-[#FBAE04] cursor-pointer">
+                    <Card className="bg-white backdrop-blur-sm max-w-sm  text-[#0F0A43] rounded-none mb-12 cursor-pointer shadow-sm transform transition duration-300 hover:scale-105 hover:shadow-2xl">
                         <CardHeader>
                             <CardTitle className="text-xl text-center">Inspiring Talks & Panel Sessions</CardTitle>
                         </CardHeader>
@@ -87,7 +97,7 @@ export default function About() {
                         </CardContent>
                     </Card>
 
-                    <Card className="rounded-sm bg-[#FBAE04] cursor-pointer">
+                    <Card className="bg-white backdrop-blur-md max-w-sm w-full text-[#0F0A43] rounded-none mb-12 cursor-pointer shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl">
                         <CardHeader>
                             <CardTitle className="text-xl text-center">Innovative Project Showcases</CardTitle>
                         </CardHeader>
@@ -100,7 +110,7 @@ export default function About() {
                         </CardContent>
                     </Card>
 
-                    <Card className="rounded-sm bg-[#FBAE04] cursor-pointer">
+                    <Card className="bg-white backdrop-blur-md max-w-sm w-full text-[#0F0A43] rounded-none mb-12 cursor-pointer shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl">
                         <CardHeader>
                             <CardTitle className="text-xl text-center">Hands-On Technical Workshops</CardTitle>
                         </CardHeader>
