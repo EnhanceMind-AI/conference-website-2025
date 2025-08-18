@@ -3,6 +3,8 @@ import Image from "next/image";
 import { Menu } from 'lucide-react';
 import Avatar from "../../public/Avatar.jpeg";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { FaXTwitter, FaLinkedin } from "react-icons/fa6"
+import { Instagram, Youtube, Mail } from 'lucide-react'
 
 export default function Navbar() {
     return (
@@ -83,6 +85,25 @@ export default function Navbar() {
                                 </Link>
                                 <Link href="/#" className="text-white hover:text-[#FBAE04]">
                                     Previous
+                                </Link>
+                            </div>
+
+
+                            <div className="flex justify-center space-x-6 mt-auto mb-6">
+                                <Link href="mailto:organizers@emaiconference.com">
+                                    <Mail size={28} className="text-white hover:text-[#FBAE04] transform transition-transform duration-300 hover:scale-110" />
+                                </Link>
+                                <Link href="https://www.youtube.com/@emaiconference" target="_blank">
+                                    <Youtube size={28} className="text-white hover:text-[#FBAE04] transform transition-transform duration-300 hover:scale-110" />
+                                </Link>
+                                <Link href="https://www.linkedin.com/company/emai-conference" target="_blank">
+                                    <FaLinkedin size={26} className="text-white hover:text-[#FBAE04] transform transition-transform duration-300 hover:scale-110" />
+                                </Link>
+                                <Link href="https://www.instagram.com/emai.conference" target="_blank">
+                                    <Instagram size={26} className="text-white hover:text-[#FBAE04] transform transition-transform duration-300 hover:scale-110" />
+                                </Link>
+                                <Link href="https://x.com/emai_conference" target="_blank">
+                                    <FaXTwitter size={26} className="text-white hover:text-[#FBAE04] transform transition-transform duration-300 hover:scale-110" />
                                 </Link>
                             </div>
                         </SheetContent>

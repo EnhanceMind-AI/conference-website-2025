@@ -1,7 +1,7 @@
 'use client'
 
 import { Card, CardContent, } from "@/components/ui/card"
-import { User, MapPinned, CalendarDays } from 'lucide-react';
+import { UsersRound, MapPinned, CalendarDays } from 'lucide-react';
 import Typewriter from "typewriter-effect";
 import HeroImg from "../../public/Hero.jpg";
 
@@ -36,7 +36,7 @@ export default function Hero() {
                 <Card className="bg-[#FBAE04] rounded-tr-xl rounded-bl-xl shadow-xl hover:shadow-2xl transition-transform hover:scale-105">
                     <CardContent className="flex items-center justify-between px-6 py-4">
                         <p className="text-xl font-semibold text-[#0F0A43]">All Invited</p>
-                        <User className="size-10 text-[#0F0A43]" />
+                        <UsersRound className="size-10 text-[#0F0A43]" />
                     </CardContent>
                 </Card>
 
