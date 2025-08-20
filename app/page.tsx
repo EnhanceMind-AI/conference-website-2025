@@ -4,22 +4,24 @@ import Packages from "@/components/sections/Packages"
 // import Schedule from "@/components/sections/Schedule"
 // import Speakers from "@/components/sections/Speakers"
 import Sponsors from "@/components/sections/Sponsors"
-import CTABanner from "@/components/sections/CTA-Banner";
+import CTABanner from "@/components/sections/CTA-Banner"
+import Goal from "@/components/sections/Goal"
+import Stats from "@/components/sections/Stats"
+import What2Expect from "@/components/sections/What2Expect"
 
 export default function Home() {
   return (
     <div>
-      <div className="bg-[#0F0A43]">
-        <Hero />
-        <About />
-        {/* <Speakers /> */}
-        {/* <Schedule /> */}
-      </div>
-      <div>
-        <Packages />
-        <Sponsors />
-        <CTABanner />
-      </div>
+      <Hero />
+      <About />
+      <Goal />
+      <Stats />
+      <What2Expect />
+      {/* <Speakers /> */}
+      {/* <Schedule /> */}
+      <Packages />
+      <Sponsors />
+      <CTABanner />
     </div>
   );
 }

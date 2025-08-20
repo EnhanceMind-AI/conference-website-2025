@@ -25,34 +25,34 @@ export default function Navbar() {
                 </div>
 
                 {/* Desktop Menu */}
-                <ul className="hidden sm:flex items-center space-x-8">
+                <ul className="hidden sm:flex items-center font-montserrat space-x-8">
                     <li>
-                        <Link href="/#" className="text-white hover:text-[#FBAE04]">
+                        <Link href="/#" className="text-white hover:text-brand-yellow">
                             About
                         </Link>
                     </li>
                     <li>
-                        <Link href="/#" className="text-white hover:text-[#FBAE04]">
+                        <Link href="/#" className="text-white hover:text-brand-yellow">
                             Speakers
                         </Link>
                     </li>
                     <li>
-                        <Link href="/#" className="text-white hover:text-[#FBAE04]">
+                        <Link href="/#" className="text-white hover:text-brand-yellow">
                             Schedule
                         </Link>
                     </li>
                     <li>
-                        <Link href="/#" className="text-white hover:text-[#FBAE04]">
+                        <Link href="/#" className="text-white hover:text-brand-yellow">
                             Packages
                         </Link>
                     </li>
                     <li>
-                        <Link href="/#" className="text-white hover:text-[#FBAE04]">
+                        <Link href="/#" className="text-white hover:text-brand-yellow">
                             Sponsors
                         </Link>
                     </li>
                     <li>
-                        <Link href="/#" className="text-white hover:text-[#FBAE04]">
+                        <Link href="/#" className="text-white hover:text-brand-yellow">
                             Previous
                         </Link>
                     </li>
@@ -62,28 +62,28 @@ export default function Navbar() {
                 <div className="sm:hidden">
                     <Sheet>
                         <SheetTrigger asChild>
-                            <button className="text-white p-2 hover:bg-[#0F0A43] rounded-lg cursor-pointer">
+                            <button className="text-white p-2 hover:bg-transparent rounded-lg cursor-pointer">
                                 <Menu size={24} />
                             </button>
                         </SheetTrigger>
-                        <SheetContent side="right" className="bg-[#0F0A43] pl-6">
-                            <div className="mt-6 flex flex-col space-y-4">
-                                <Link href="/#" className="text-white hover:text-[#FBAE04]">
+                        <SheetContent side="right" className="bg-brand-red pl-6">
+                            <div className="mt-6 flex flex-col space-y-4 font-montserrat">
+                                <Link href="/#" className="text-white hover:text-brand-yellow">
                                     About
                                 </Link>
-                                <Link href="/#" className="text-white hover:text-[#FBAE04]">
+                                <Link href="/#" className="text-white hover:text-brand-yellow">
                                     Speakers
                                 </Link>
-                                <Link href="/#" className="text-white hover:text-[#FBAE04]">
+                                <Link href="/#" className="text-white hover:text-brand-yellow">
                                     Schedule
                                 </Link>
-                                <Link href="/#" className="text-white hover:text-[#FBAE04]">
+                                <Link href="/#" className="text-white hover:text-brand-yellow">
                                     Packages
                                 </Link>
-                                <Link href="/#" className="text-white hover:text-[#FBAE04]">
+                                <Link href="/#" className="text-white hover:text-brand-yellow">
                                     Sponsors
                                 </Link>
-                                <Link href="/#" className="text-white hover:text-[#FBAE04]">
+                                <Link href="/#" className="text-white hover:text-brand-yellow">
                                     Previous
                                 </Link>
                             </div>
@@ -91,19 +91,19 @@ export default function Navbar() {
 
                             <div className="flex justify-center space-x-6 mt-auto mb-6">
                                 <Link href="mailto:organizers@emaiconference.com">
-                                    <Mail size={28} className="text-white hover:text-[#FBAE04] transform transition-transform duration-300 hover:scale-110" />
+                                    <Mail size={28} className="text-white hover:text-brand-yellow transform transition-transform duration-300 hover:scale-110" />
                                 </Link>
                                 <Link href="https://www.youtube.com/@emaiconference" target="_blank">
-                                    <Youtube size={28} className="text-white hover:text-[#FBAE04] transform transition-transform duration-300 hover:scale-110" />
+                                    <Youtube size={28} className="text-white hover:text-brand-yellow transform transition-transform duration-300 hover:scale-110" />
                                 </Link>
                                 <Link href="https://www.linkedin.com/company/emai-conference" target="_blank">
-                                    <FaLinkedin size={26} className="text-white hover:text-[#FBAE04] transform transition-transform duration-300 hover:scale-110" />
+                                    <FaLinkedin size={26} className="text-white hover:text-brand-yellow transform transition-transform duration-300 hover:scale-110" />
                                 </Link>
                                 <Link href="https://www.instagram.com/emai.conference" target="_blank">
-                                    <Instagram size={26} className="text-white hover:text-[#FBAE04] transform transition-transform duration-300 hover:scale-110" />
+                                    <Instagram size={26} className="text-white hover:text-brand-yellow transform transition-transform duration-300 hover:scale-110" />
                                 </Link>
                                 <Link href="https://x.com/emai_conference" target="_blank">
-                                    <FaXTwitter size={26} className="text-white hover:text-[#FBAE04] transform transition-transform duration-300 hover:scale-110" />
+                                    <FaXTwitter size={26} className="text-white hover:text-brand-yellow transform transition-transform duration-300 hover:scale-110" />
                                 </Link>
                             </div>
                         </SheetContent>

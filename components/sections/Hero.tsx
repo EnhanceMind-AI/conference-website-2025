@@ -15,14 +15,14 @@ export default function Hero() {
 
             {/* Content */}
             <div className="relative max-w-7xl mx-auto px-4">
-                <h1 className="text-4xl sm:text-6xl lg:text-7xl text-white text-center font-semibold">
+                <h1 className="text-4xl sm:text-6xl lg:text-8xl text-brand-red text-center font-semibold font-jingleberry">
                     EnhanceMind AI 2025 Conference
                 </h1>
 
-                <div className="text-xl sm:text-3xl text-white text-center font-medium mt-3">
+                <div className="text-xl sm:text-3xl text-brand-yellow text-center mt-3 font-montserrat">
                     <Typewriter
                         options={{
-                            strings: ['AI & Innovation Summit.', 'Global Networking Event.'],
+                            strings: ['AI at the Edge', 'Innovations, Impact, and Inclusion.'],
                             autoStart: true,
                             loop: true,
                             delay: 60
@@ -33,21 +33,21 @@ export default function Hero() {
 
             {/* Info Cards */}
             <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-3 gap-6 my-12">
-                <Card className="bg-[#FBAE04] rounded-tr-xl rounded-bl-xl shadow-xl hover:shadow-2xl transition-transform hover:scale-105">
+                <Card className="bg-brand-gray rounded-tr-xl rounded-bl-xl shadow-xl hover:shadow-2xl transition-transform hover:scale-105">
                     <CardContent className="flex items-center justify-between px-6 py-4">
                         <p className="text-xl font-semibold text-[#0F0A43]">All Invited</p>
                         <UsersRound className="size-10 text-[#0F0A43]" />
                     </CardContent>
                 </Card>
 
-                <Card className="bg-[#FBAE04] rounded-tr-xl rounded-bl-xl shadow-xl hover:shadow-2xl transition-transform hover:scale-105">
+                <Card className="bg-brand-gray rounded-tr-xl rounded-bl-xl shadow-xl hover:shadow-2xl transition-transform hover:scale-105">
                     <CardContent className="flex items-center justify-between px-6 py-4">
                         <p className="text-xl font-semibold text-[#0F0A43]">September 2025</p>
                         <CalendarDays className="size-10 text-[#0F0A43]" />
                     </CardContent>
                 </Card>
 
-                <Card className="bg-[#FBAE04] rounded-tr-xl rounded-bl-xl shadow-xl hover:shadow-2xl transition-transform hover:scale-105">
+                <Card className="bg-brand-gray rounded-tr-xl rounded-bl-xl shadow-xl hover:shadow-2xl transition-transform hover:scale-105">
                     <CardContent className="flex items-center justify-between px-6 py-4">
                         <p className="text-xl font-semibold text-[#0F0A43]">Dar Es Salaam</p>
                         <MapPinned className="size-10 text-[#0F0A43]" />

@@ -1,126 +1,73 @@
 'use client'
 
-import {
-    Card, CardContent, CardHeader, CardTitle 
-} from "@/components/ui/card"
 import Image from "next/image"
-import CountUp from "react-countup"
-import { useInView } from "react-intersection-observer"
-import emaiImage from "../../public/emai-crap.jpg"
+import Link from 'next/link'
+import { motion, Variants } from "framer-motion"
+import about1 from "../../public/About1.jpeg"
+import about2 from "../../public/About2.jpeg"
+import about3 from "../../public/About3.jpeg"
 
-const stats = [
-    { label: "Speakers", value: 25 },
-    { label: "Attendees", value: 300 },
-    { label: "Sponsors", value: 15 },
-    { label: "Sessions", value: 20 },
-];
+const images = [about1, about2, about3];
+
+// Variants for card animation
+const cardVariants: Variants = {
+    hidden: { opacity: 0, y: -200, rotate: -15 }, // start above, tilted
+    visible: (index: number) => ({
+        opacity: 1,
+        y: index * 18,  // drop into stack
+        x: index * 18,
+        rotate: 0,
+        transition: {
+            type: "spring",
+            stiffness: 120,
+            damping: 12,
+            delay: index * 0.3, // stagger each card
+        },
+    }),
+};
+
 
 export default function About() {
-
-    const { ref, inView } = useInView({
-        triggerOnce: false,
-        threshold: 0.2
-    })
-
     return (
-        <div ref={ref} className='max-w-7xl mx-auto px-4'>
+        <div className='max-w-7xl mx-auto px-4'>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 my-12">
+                
                 <div className="about">
-                    <h1 className='text-left text-4xl text-white mb-2'>About EMAI Conference</h1>
+                    <h1 className='text-left text-4xl sm:text-5xl text-brand-yellow font-jingleberry mb-2'>About EMAI Conference</h1>
 
-                    <p className='text-white text-justify text-lg mb-5'>EnhanceMind AI(emAI) Conference is an event prepared and hosted by CameLabs to explore the fundamentals, advances, and breakthroughs in Artificial Intelligence.</p>
-                    <p className='text-white text-lg'>The EnhanceMind AI Conference is a premier event for professionals in the field of Artificial Intelligence, Machine Learning, and Data Science.
-                        The conference is expected to attract diverse attendees from various industries such as technology, healthcare, finance, and more.
-                        Attendees include C-level executives, researchers, data scientists, engineers, and developers who are looking to stay on the cutting edge of the latest advancements in AI technology.
-                        The conference also attracts start-up companies and entrepreneurs who are interested in exploring new opportunities in the AI industry.
+                    <p className='text-brand-gray text-justify text-lg font-montserrat mb-5'>
+                        Since 2022, EnhanceMind AI(EMAI) Conference has been an annual event dedicated to exploring the fundamentals, emerging trends, and groundbreaking breakthroughs in Artificial Intelligence(AI).
+                        Now a recognized hub for innovation, thought leadership, and collaboration, the conference stands as a premier platform for technologists, entrepreneurs, researchers, and professionals across industries.
+                        Each year, the EMAI Conference attracts a diverse audience, from data scientists and AI engineers to business leaders and startup founders who are eager to dive into the latest developments in AI, Machine Learning, Generative AI, and Data Science.
+                        As part of this year&apos;s diverse and inclusive programming, the conference will also feature special segments such as the <Link href="/women-in-ai" className="text-brand-red" target="_blank">Women in AI Breakfast</Link> a space dedicated to celebrating and empowering women driving change in the AI field.
                     </p>
                 </div>
-                <div className="image">
-                    <Image
-                        src={emaiImage}
-                        alt="crap emai image"
-                        className="object-fill rounded-3xl shadow-2xl hover:scale-105 transition-transform"
-                        width={600}
-                        height={600}
-                    />
-                </div>
-            </div>
 
-            <div className="insights-card">
-                <div className="grid grid-cols-1 sm:grid-cols-4 gap-6 mx-auto my-20">
-                    {stats.map((stat, i) => (
-                        <Card key={i} className="rounded-2xl bg-[#FBAE04] shadow-lg flex items-center justify-center">
-                            <CardContent className="flex flex-col items-center">
-                                <span className="text-3xl font-bold text-white">
-                                    {/* Animate only when in view */}
-                                    {inView ? (
-                                        <CountUp
-                                            start={0}
-                                            end={stat.value}
-                                            duration={4} // Animation time in seconds
-                                            delay={0.5}
-                                        />
-                                    ) : (
-                                        0 // Static zero before entering view
-                                    )}
-                                    {stat.label === "Attendees" && "+"}
-                                    {stat.label === "Sessions" && "+"}
-                                </span>
-                                <span className="text-lg text-white">{stat.label}</span>
-                            </CardContent>
-                        </Card>
+                <div className="flex justify-center items-center relative h-[500px] w-full">
+                    {images.map((img, index) => (
+                        <motion.div
+                            key={index}
+                            custom={index}
+                            initial="hidden"
+                            animate="visible"
+                            variants={cardVariants}
+                            drag
+                            dragElastic={0.2}
+                            whileTap={{ scale: 1.05, rotate: 3 }}
+                            className="absolute cursor-grab active:cursor-grabbing"
+                            style={{
+                                zIndex: images.length - index,
+                            }}
+                        >
+                            <Image
+                                src={img}
+                                alt={`EMAI ${index + 1}`}
+                                className="rounded-md shadow-2xl"
+                                width={450}
+                                height={450}
+                            />
+                        </motion.div>
                     ))}
-                </div>
-            </div>
-
-            <div className="what2expect">
-                <h2 className="text-center text-4xl text-white">What to Expect at EMAI Conference 2025?</h2>
-                <p className="text-white text-lg mt-4">
-                    At the heart of every great conference is the chance to connect  and this one is no different.
-                    Whether you&apos;re a curious student, a seasoned engineer, or an industry expert, the Emai AI Conference offers a rare space to meet fellow thinkers, makers, and visionaries.
-                    Share ideas over coffee, find potential collaborators, or simply get inspired by the people around you.
-                    Because sometimes, the best breakthroughs happen between sessions. Other stuff to expect Include......<br></br>
-                </p>
-            </div>
-
-            <div className="exCards">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
-                    <Card className="bg-white backdrop-blur-sm max-w-sm  text-[#0F0A43] rounded-none mb-12 cursor-pointer shadow-sm transform transition duration-300 hover:scale-105 hover:shadow-2xl">
-                        <CardHeader>
-                            <CardTitle className="text-xl text-center">Inspiring Talks & Panel Sessions</CardTitle>
-                        </CardHeader>
-                        <CardContent>
-                            <p>
-                                From ethical dilemmas to real-world applications, our talks dive into the most pressing questions in AI today.
-                                Hear from thought leaders, researchers, and change-makers as they explore how artificial intelligence is shaping our world and what lies ahead.
-                            </p>
-                        </CardContent>
-                    </Card>
-
-                    <Card className="bg-white backdrop-blur-md max-w-sm w-full text-[#0F0A43] rounded-none mb-12 cursor-pointer shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl">
-                        <CardHeader>
-                            <CardTitle className="text-xl text-center">Innovative Project Showcases</CardTitle>
-                        </CardHeader>
-                        <CardContent>
-                            <p>
-                                Experience the future of AI up close.
-                                Our exhibition space features cutting-edge demos, prototypes, and live showcases from startups, researchers, and developers.
-                                It&apos;s your chance to explore what&apos;s being built and who&apos;s building it.
-                            </p>
-                        </CardContent>
-                    </Card>
-
-                    <Card className="bg-white backdrop-blur-md max-w-sm w-full text-[#0F0A43] rounded-none mb-12 cursor-pointer shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl">
-                        <CardHeader>
-                            <CardTitle className="text-xl text-center">Hands-On Technical Workshops</CardTitle>
-                        </CardHeader>
-                        <CardContent>
-                            <p>
-                                Level up your skills with focused, practical sessions led by experienced practitioners.
-                                Whether it&apos;s learning a new framework, experimenting with models, or diving into data, these workshops are built to give you something real to take home.
-                            </p>
-                        </CardContent>
-                    </Card>
                 </div>
             </div>
         </div >
