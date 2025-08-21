@@ -7,6 +7,7 @@ import Sponsors from "@/components/sections/Sponsors"
 import CTABanner from "@/components/sections/CTA-Banner"
 import Goal from "@/components/sections/Goal"
 import Stats from "@/components/sections/Stats"
+import Showcase from "@/components/sections/Showcase"
 import What2Expect from "@/components/sections/What2Expect"
 
 export default function Home() {
@@ -20,8 +21,9 @@ export default function Home() {
       {/* <Speakers /> */}
       {/* <Schedule /> */}
       <Packages />
-      <Sponsors />
+      <Showcase />
       <CTABanner />
+      <Sponsors />
     </div>
   );
 }

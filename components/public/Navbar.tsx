@@ -1,19 +1,34 @@
-import Link from "next/link";
-import Image from "next/image";
-import { Menu } from 'lucide-react';
-import Avatar from "../../public/Avatar.jpeg";
+'use client'
+
+import Link from "next/link"
+import Image from "next/image"
+import { Menu } from 'lucide-react'
+import { useRouter } from "next/navigation"
+import Avatar from "../../public/Avatar.jpeg"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { FaXTwitter, FaLinkedin } from "react-icons/fa6"
 import { Instagram, Youtube, Mail } from 'lucide-react'
 
 export default function Navbar() {
+
+    const router = useRouter();
+
+    const handleClickLogo = (event: React.MouseEvent) => {
+        event.preventDefault(); // prevent default Link navigation
+        if (window.location.pathname === "/") {
+            router.push("/") // reload if already on homepage
+        } else {
+            router.push("/"); // avigate home if on another page
+        }
+    }
+
     return (
         <header className="fixed top-0 w-full z-50 bg-transparent backdrop-blur-xs">
             <nav className="flex items-center justify-between max-w-7xl mx-auto px-4 py-2">
 
                 {/* Logo */}
                 <div className="flex items-center space-x-2">
-                    <Link href={"/"}>
+                    <Link href={"/"} onClick={handleClickLogo}>
                         <Image
                             src={Avatar}
                             alt="EnhanceMind AI Logo"
@@ -44,6 +59,11 @@ export default function Navbar() {
                     <li>
                         <Link href="/#" className="text-white hover:text-brand-yellow">
                             Packages
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href="/#" className="text-white hover:text-brand-yellow">
+                            Showcase
                         </Link>
                     </li>
                     <li>
@@ -81,6 +101,9 @@ export default function Navbar() {
                                     Packages
                                 </Link>
                                 <Link href="/#" className="text-white hover:text-brand-yellow">
+                                    Showcase
+                                </Link>
+                                <Link href="/#" className="text-white hover:text-brand-yellow">
                                     Sponsors
                                 </Link>
                                 <Link href="/#" className="text-white hover:text-brand-yellow">
@@ -88,7 +111,7 @@ export default function Navbar() {
                                 </Link>
                             </div>
 
-
+                            {/* social media icons  */}
                             <div className="flex justify-center space-x-6 mt-auto mb-6">
                                 <Link href="mailto:organizers@emaiconference.com">
                                     <Mail size={28} className="text-white hover:text-brand-yellow transform transition-transform duration-300 hover:scale-110" />

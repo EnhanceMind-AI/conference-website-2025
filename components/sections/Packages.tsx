@@ -2,6 +2,20 @@
 
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "../ui/button"
+import Link from "next/link"
+import { motion, Variants } from "framer-motion"
+
+const zoomIn: Variants = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut"
+    }
+  }
+}
 
 export default function Packages() {
   return (
@@ -13,52 +27,70 @@ export default function Packages() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 md:gap-20 justify-items-center">
 
         {/* Standard Package */}
-        <Card className="bg-brand-red backdrop-blur-md border border-white/20 shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl max-w-sm w-full">
-          <CardHeader className="px-6 pt-6">
-            <CardTitle className="text-white text-center text-2xl font-jingleberry">
-              Standard Package
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="px-6">
-            <ul className="text-white font-montserrat space-y-2 list-disc list-inside">
-              <li>Post-Conference Resources</li>
-              <li>Access All Sessions</li>
-              <li>Conference Materials</li>
-              <li>Networking Opportunities</li>
-              <li>Exclusive Exhibitions</li>
-              <li>Meals & Refreshments</li>
-            </ul>
-          </CardContent>
-          <CardFooter className="flex justify-center pb-6">
-            <Button variant="outline" className="cursor-pointer bg-brand-yellow text-black font-montserrat rounded-none px-8 py-3 font-medium hover:brightness-90">
-              Book
-            </Button>
-          </CardFooter>
-        </Card>
+        <motion.div
+          variants={zoomIn}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.3 }}
+        >
+          <Card className="bg-brand-red backdrop-blur-md border border-white/20 shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl max-w-sm w-full">
+            <CardHeader className="px-6 pt-6">
+              <CardTitle className="text-white text-center text-2xl font-jingleberry">
+                Standard Package
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="px-6">
+              <ul className="text-white font-montserrat space-y-2 list-disc list-inside">
+                <li>Post-Conference Resources</li>
+                <li>Access All Sessions</li>
+                <li>Conference Materials</li>
+                <li>Networking Opportunities</li>
+                <li>Exclusive Exhibitions</li>
+                <li>Meals & Refreshments</li>
+              </ul>
+            </CardContent>
+            <CardFooter className="flex justify-center pb-6">
+              <Button variant="outline" className="cursor-pointer bg-brand-yellow text-black font-montserrat rounded-none px-8 py-3 font-medium hover:brightness-90">
+                <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdL30OsqngOoACcVE4QVO3uAw7VEKkUCP_eEiH3-ruU5WEX_w/viewform" target="_blank">
+                  Book
+                </Link>
+              </Button>
+            </CardFooter>
+          </Card>
+        </motion.div>
 
         {/* Premium Package */}
-        <Card className="bg-brand-red backdrop-blur-md border border-white/20 shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl max-w-sm w-full">
-          <CardHeader className="px-6 pt-6">
-            <CardTitle className="text-white text-center text-2xl font-jingleberry">
-              Premium Package
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="px-6">
-            <ul className="text-white font-montserrat space-y-2 list-disc list-inside">
-              <li>Post-Conference Resources</li>
-              <li>Access All Sessions</li>
-              <li>Workshop Certificate</li>
-              <li>Exclusive Exhibitions</li>
-              <li>Meals & Refreshments</li>
-              <li>Executive Networking Dinner</li>
-            </ul>
-          </CardContent>
-          <CardFooter className="flex justify-center pb-6">
-            <Button variant="outline" className="cursor-pointer bg-brand-yellow text-black font-montserrat rounded-none px-8 py-3 font-medium hover:brightness-90">
-              Book
-            </Button>
-          </CardFooter>
-        </Card>
+        <motion.div
+          variants={zoomIn}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.3 }}
+        >
+          <Card className="bg-brand-red backdrop-blur-md border border-white/20 shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl max-w-sm w-full">
+            <CardHeader className="px-6 pt-6">
+              <CardTitle className="text-white text-center text-2xl font-jingleberry">
+                Premium Package
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="px-6">
+              <ul className="text-white font-montserrat space-y-2 list-disc list-inside">
+                <li>Post-Conference Resources</li>
+                <li>Access All Sessions</li>
+                <li>Workshop Certificate</li>
+                <li>Exclusive Exhibitions</li>
+                <li>Meals & Refreshments</li>
+                <li>Executive Networking Dinner</li>
+              </ul>
+            </CardContent>
+            <CardFooter className="flex justify-center pb-6">
+              <Button variant="outline" className="cursor-pointer bg-brand-yellow text-black font-montserrat rounded-none px-8 py-3 font-medium hover:brightness-90">
+                <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdL30OsqngOoACcVE4QVO3uAw7VEKkUCP_eEiH3-ruU5WEX_w/viewform" target="_blank">
+                  Book
+                </Link>
+              </Button>
+            </CardFooter>
+          </Card>
+        </motion.div>
 
       </div>
 

@@ -1,15 +1,16 @@
 import { Button } from "../ui/button"
-import CTAsvg from "../../public/CTAsvg.svg"
+import CTAsvg from "../../public/CTA.svg"
 import Image from "next/image"
+import Link from "next/link"
 
 
 export default function CTABanner() {
     return (
         <div>
             {/* Call to Action Section */}
-            <section className="relative bg-brand-yellow pb-4">
+            <section className="relative bg-brand-yellow pb-4 pt-10">
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-r from-[#d7c606] to-[#d6c304] opacity-90"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-[#80760b] to-[#ead815] opacity-90"></div>
 
                 <div className="relative max-w-5xl mx-auto flex flex-col items-center text-center gap-4">
                     {/* SVG Illustration */}
@@ -33,8 +34,10 @@ export default function CTABanner() {
                     </p>
 
                     {/* Button */}
-                    <Button className="bg-brand-red text-white font-montserrat rounded-none px-8 py-3 text-lg font-semibold shadow-xl transition hover:bg-[#b30707]">
-                        Book Now
+                    <Button className="bg-brand-red text-white font-montserrat rounded-none px-8 py-3 text-lg font-semibold shadow-xl transition hover:brightness-90 cursor-pointer">
+                        <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdL30OsqngOoACcVE4QVO3uAw7VEKkUCP_eEiH3-ruU5WEX_w/viewform" target="_blank">
+                            Book Now
+                        </Link>
                     </Button>
                 </div>
             </section>

@@ -42,7 +42,7 @@ export default function Hero() {
 
                 <Card className="bg-brand-gray rounded-tr-xl rounded-bl-xl shadow-xl hover:shadow-2xl transition-transform hover:scale-105">
                     <CardContent className="flex items-center justify-between px-6 py-4">
-                        <p className="text-xl font-semibold text-[#0F0A43]">September 2025</p>
+                        <p className="text-xl font-semibold text-[#0F0A43]">25th-27th September 2025</p>
                         <CalendarDays className="size-10 text-[#0F0A43]" />
                     </CardContent>
                 </Card>
