@@ -143,3 +143,7 @@
     font-family: var(--font-jingleberry);
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
