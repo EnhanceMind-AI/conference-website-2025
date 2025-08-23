@@ -39,7 +39,7 @@ export default function About() {
                             Since 2022, EnhanceMind AI(EMAI) Conference has been an annual event dedicated to exploring the fundamentals, emerging trends, and groundbreaking breakthroughs in Artificial Intelligence(AI).
                             Now a recognized hub for innovation, thought leadership, and collaboration, the conference stands as a premier platform for technologists, entrepreneurs, researchers, and professionals across industries.
                             Each year, the EMAI Conference attracts a diverse audience, from data scientists and AI engineers to business leaders and startup founders who are eager to dive into the latest developments in AI, Machine Learning, Generative AI, and Data Science.
-                            As part of this year&apos;s diverse and inclusive programming, the conference will also feature special segments such as the <Link href="/page/women-in-ai" className="text-brand-red">Women in AI Breakfast</Link> a space dedicated to celebrating and empowering women driving change in the AI field.
+                            As part of this year&apos;s diverse and inclusive programming, the conference will also feature special segments such as the <Link href="/women-in-ai" className="text-brand-red">Women in AI Breakfast</Link> a space dedicated to celebrating and empowering women driving change in the AI field.
                         </p>
                     </div>
 
