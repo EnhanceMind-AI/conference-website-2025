@@ -107,7 +107,7 @@ export default function Navbar() {
                 <div className="sm:hidden">
                     <Sheet open={isOpen} onOpenChange={setIsOpen}>
                         <SheetTrigger asChild>
-                            <button className="text-white p-2 hover:bg-transparent rounded-lg cursor-pointer">
+                            <button className="text-brand-gray p-2 hover:bg-transparent rounded-lg cursor-pointer">
                                 <Menu size={24} />
                             </button>
                         </SheetTrigger>

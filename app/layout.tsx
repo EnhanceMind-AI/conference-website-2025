@@ -4,6 +4,7 @@ import Navbar from "@/components/public/Navbar"
 import Footer from "@/components/public/Footer"
 import { Montserrat } from "next/font/google"
 import localFont from "next/font/local"
+import { Analytics } from "@vercel/analytics/next"
 
 
 const montserrat = Montserrat({
@@ -27,6 +28,7 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
         <Navbar />
         {children}
         <Footer />
+        <Analytics />
       </body>
     </html>
   );

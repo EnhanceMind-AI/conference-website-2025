@@ -5,6 +5,16 @@ import Link from "next/link";
 import { Button } from "../../ui/button";
 
 export default function Showcase() {
+    const timelineItem = (title: string, date: string) => (
+        <div className="relative pl-10 pb-5">
+            {/* Circle marker */}
+            <div className="absolute left-0 top-1.5 w-4 h-4 bg-brand-yellow rounded-full border-2 border-white"></div>
+            {/* Title and date */}
+            <p className="font-montserrat text-lg text-brand-gray">
+                {title}: <span className="font-semibold text-brand-red">{date}</span>
+            </p>
+        </div>
+    );
     return (
         <section id="showcase">
             <div className="max-w-7xl mx-auto px-4 py-10">
@@ -45,25 +55,18 @@ export default function Showcase() {
                                 </ul>
                             </div>
 
-                            <div>
-                                <h3 className="font-semibold text-lg">Competition Timeline</h3>
-                                <ul className="list-disc list-inside space-y-1">
-                                    <li>
-                                        Launching Date: <strong>June 25, 2025</strong>
-                                    </li>
-                                    <li>
-                                        Submission Deadline: <strong>August 25, 2025</strong>
-                                    </li>
-                                    <li>
-                                        Winners Announced: <strong>September 27, 2025</strong>
-                                    </li>
-                                </ul>
+                            {/* Timeline */}
+                            <h3 className="text-xl font-semibold text-brand-gray mb-4">Competition Timeline</h3>
+                            <div className="relative border-l-4 border-brand-red pl-5">
+                                {timelineItem("Launching Date", "June 25, 2025")}
+                                {timelineItem("Submission Deadline", "August 25, 2025")}
+                                {timelineItem("Winners Announced", "September 27, 2025")}
                             </div>
                         </div>
 
                         {/* CTA Button */}
                         <div className="mt-8 flex justify-center">
-                            <Button variant="outline" className="cursor-pointer bg-brand-red text-brand-gray font-montserrat rounded-none px-8 py-3 font-medium hover:brightness-90">
+                            <Button variant="outline" className="cursor-pointer bg-brand-yellow text-brand-gray font-montserrat rounded-none px-8 py-3 font-medium hover:brightness-90">
                                 <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdL30OsqngOoACcVE4QVO3uAw7VEKkUCP_eEiH3-ruU5WEX_w/viewform" target="_blank">
                                     Submit Project
                                 </Link>
@@ -80,6 +83,14 @@ export default function Showcase() {
                             A dynamic platform to exhibit groundbreaking AI projects, prototypes,
                             and solutions.
                         </p>
+
+                        <div className="text-brand-gray font-montserrat mb-6">
+                            <h3 className="font-semibold text-lg">Eligibility</h3>
+                            <p>
+                                Open to individuals, teams, and organizations from academia,
+                                industry, and startups.
+                            </p>
+                        </div>
 
                         <div className="space-y-6 text-brand-gray font-montserrat ">
                             <div>
@@ -98,24 +109,17 @@ export default function Showcase() {
                                 </ul>
                             </div>
 
-                            <div>
-                                <h3 className="font-semibold text-lg">Expo Timeline</h3>
-                                <ul className="list-disc list-inside space-y-1">
-                                    <li>
-                                        Launching Date: <strong>June 30, 2025</strong>
-                                    </li>
-                                    <li>
-                                        Submission Deadline: <strong>August 31, 2025</strong>
-                                    </li>
-                                    <li>
-                                        Notification of Acceptance: <strong>September 15, 2025</strong>
-                                    </li>
-                                </ul>
+                            {/* Timeline */}
+                            <h3 className="text-xl font-semibold text-brand-gray mb-4">Expo Timeline</h3>
+                            <div className="relative border-l-4 border-brand-red pl-6">
+                                {timelineItem("Launching Date", "June 30, 2025")}
+                                {timelineItem("Submission Deadline", "August 31, 2025")}
+                                {timelineItem("Notification of Acceptance", "September 15, 2025")}
                             </div>
                         </div>
 
                         {/* CTA Button */}
-                        <div className="mt-8">
+                        <div className="mt-8 flex justify-center">
                             <Button variant="outline" className="cursor-pointer bg-brand-yellow text-brand-gray font-montserrat rounded-none px-8 py-3 font-medium">
                                 <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdL30OsqngOoACcVE4QVO3uAw7VEKkUCP_eEiH3-ruU5WEX_w/viewform" target="_blank">
                                     Register for Expo

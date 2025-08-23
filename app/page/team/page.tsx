@@ -8,7 +8,7 @@ export default function Team() {
         <div className="max-w-7xl mx-auto px-4 py-12">
             <h1 className="text-left text-4xl sm:text-5xl text-brand-yellow font-jingleberry mt-12">Executive Profile</h1>
 
-            <div className="flex flex-row items-center gap-3">
+            <div className="flex flex-row items-center gap-2">
                 <p className='text-brand-gray font-montserrat text-lg my-3'>Meet the Geniouses Behind EmAI Conference 2025. </p>
                 <Smile size={35} className='text-brand-yellow animate-bounce' />
             </div>
