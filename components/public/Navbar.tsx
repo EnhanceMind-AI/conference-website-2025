@@ -48,38 +48,38 @@ export default function Navbar() {
                 {/* Desktop Menu */}
                 <ul className="hidden sm:flex items-center font-montserrat space-x-8">
                     <li>
-                        <Link href="#about" className="text-brand-gray hover:text-brand-yellow">
+                        <Link href="#about" className="text-brand-yellow hover:text-brand-yellow">
                             About
                         </Link>
                     </li>
                     <li>
-                        <Link href="/#" className="text-brand-gray hover:text-brand-yellow">
+                        <Link href="/#" className="text-brand-yellow hover:text-brand-yellow">
                             Speakers
                         </Link>
                     </li>
                     <li>
-                        <Link href="/#" className="text-brand-gray hover:text-brand-yellow">
+                        <Link href="/#" className="text-brand-yellow hover:text-brand-yellow">
                             Schedule
                         </Link>
                     </li>
                     <li>
-                        <Link href="#packages" className="text-brand-gray hover:text-brand-yellow">
+                        <Link href="#packages" className="text-brand-yellow hover:text-brand-yellow">
                             Packages
                         </Link>
                     </li>
                     <li>
-                        <Link href="#showcase" className="text-brand-gray hover:text-brand-yellow">
+                        <Link href="#showcase" className="text-brand-yellow hover:text-brand-yellow">
                             Showcase
                         </Link>
                     </li>
                     <li>
-                        <Link href="#sponsors" className="text-brand-gray hover:text-brand-yellow">
+                        <Link href="#sponsors" className="text-brand-yellow hover:text-brand-yellow">
                             Sponsors
                         </Link>
                     </li>
                     <li>
                         <DropdownMenu>
-                            <DropdownMenuTrigger className="text-brand-gray hover:text-brand-yellow cursor-pointer">
+                            <DropdownMenuTrigger className="text-brand-yellow hover:text-brand-yellow cursor-pointer">
                                 Previous
                             </DropdownMenuTrigger>
                             <DropdownMenuContent className="bg-brand-gray text-white border-none">
@@ -107,7 +107,7 @@ export default function Navbar() {
                 <div className="sm:hidden">
                     <Sheet open={isOpen} onOpenChange={setIsOpen}>
                         <SheetTrigger asChild>
-                            <button className="text-brand-gray p-2 hover:bg-transparent rounded-lg cursor-pointer">
+                            <button className="text-brand-yellow p-2 hover:bg-transparent rounded-lg cursor-pointer">
                                 <Menu size={24} />
                             </button>
                         </SheetTrigger>
