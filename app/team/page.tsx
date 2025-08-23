@@ -1,7 +1,7 @@
 import React from 'react'
 import { Smile } from 'lucide-react';
 import Image from 'next/image';
-import gilbert from '../../../public/PICHANO1.jpg'
+import gilbert from '../../public/PICHANO1.jpg'
 
 export default function Team() {
     return (
@@ -33,7 +33,7 @@ export default function Team() {
                     </div>
                 </div>
 
-                   <div className="bg-white p-5 rounded-lg shadow-lg flex flex-col items-center">
+                <div className="bg-white p-5 rounded-lg shadow-lg flex flex-col items-center">
                     <Image
                         src={gilbert}
                         alt="Team Member"
@@ -52,7 +52,7 @@ export default function Team() {
                     </div>
                 </div>
 
-                   <div className="bg-white p-5 rounded-lg shadow-lg flex flex-col items-center">
+                <div className="bg-white p-5 rounded-lg shadow-lg flex flex-col items-center">
                     <Image
                         src={gilbert}
                         alt="Team Member"
