@@ -37,7 +37,8 @@ export default function Packages() {
             <Card className="bg-brand-red backdrop-blur-md border border-white/20 shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl max-w-sm w-full">
               <CardHeader className="px-6 pt-6">
                 <CardTitle className="text-white text-center text-2xl font-jingleberry">
-                  Standard Package
+                  <p className="text-3xl">Standard Package</p>
+                  Tshs 50,000/=
                 </CardTitle>
               </CardHeader>
               <CardContent className="px-6">
@@ -70,7 +71,8 @@ export default function Packages() {
             <Card className="bg-brand-red backdrop-blur-md border border-white/20 shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl max-w-sm w-full">
               <CardHeader className="px-6 pt-6">
                 <CardTitle className="text-white text-center text-2xl font-jingleberry">
-                  Premium Package
+                  <p className="text-3xl"> Premium Package</p>
+                  Tshs 100,000/=
                 </CardTitle>
               </CardHeader>
               <CardContent className="px-6">
