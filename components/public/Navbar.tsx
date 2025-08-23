@@ -7,11 +7,16 @@ import { useRouter } from "next/navigation"
 import Avatar from "../../public/Avatar.jpeg"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { FaXTwitter, FaLinkedin } from "react-icons/fa6"
-import { Instagram, Youtube, Mail } from 'lucide-react'
+import { Instagram, Youtube, Mail, ChevronUp, ChevronDown, ExternalLink } from 'lucide-react'
+import { useState } from "react"
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 
 export default function Navbar() {
 
     const router = useRouter();
+    const [isOpen, setIsOpen] = useState(false); // state to control Sheet in Desktop View
+    const [showPrevious, setShowPrevious] = useState(false); // state to control Sheet in Mobile View
+
 
     const handleClickLogo = (event: React.MouseEvent) => {
         event.preventDefault(); // prevent default Link navigation
@@ -21,6 +26,7 @@ export default function Navbar() {
             router.push("/"); // avigate home if on another page
         }
     }
+    const handleCloseMenu = () => setIsOpen(false); // close sheet after click
 
     return (
         <header className="fixed top-0 w-full z-50 bg-transparent backdrop-blur-xs">
@@ -42,45 +48,64 @@ export default function Navbar() {
                 {/* Desktop Menu */}
                 <ul className="hidden sm:flex items-center font-montserrat space-x-8">
                     <li>
-                        <Link href="/#" className="text-white hover:text-brand-yellow">
+                        <Link href="#about" className="text-brand-gray hover:text-brand-yellow">
                             About
                         </Link>
                     </li>
                     <li>
-                        <Link href="/#" className="text-white hover:text-brand-yellow">
+                        <Link href="/#" className="text-brand-gray hover:text-brand-yellow">
                             Speakers
                         </Link>
                     </li>
                     <li>
-                        <Link href="/#" className="text-white hover:text-brand-yellow">
+                        <Link href="/#" className="text-brand-gray hover:text-brand-yellow">
                             Schedule
                         </Link>
                     </li>
                     <li>
-                        <Link href="/#" className="text-white hover:text-brand-yellow">
+                        <Link href="#packages" className="text-brand-gray hover:text-brand-yellow">
                             Packages
                         </Link>
                     </li>
                     <li>
-                        <Link href="/#" className="text-white hover:text-brand-yellow">
+                        <Link href="#showcase" className="text-brand-gray hover:text-brand-yellow">
                             Showcase
                         </Link>
                     </li>
                     <li>
-                        <Link href="/#" className="text-white hover:text-brand-yellow">
+                        <Link href="#sponsors" className="text-brand-gray hover:text-brand-yellow">
                             Sponsors
                         </Link>
                     </li>
                     <li>
-                        <Link href="/#" className="text-white hover:text-brand-yellow">
-                            Previous
-                        </Link>
+                        <DropdownMenu>
+                            <DropdownMenuTrigger className="text-brand-gray hover:text-brand-yellow cursor-pointer">
+                                Previous
+                            </DropdownMenuTrigger>
+                            <DropdownMenuContent className="bg-brand-gray text-white border-none">
+                                <DropdownMenuItem>
+                                    <Link href="https://emaiconference.com/index.html" target="_blank">
+                                        2024
+                                    </Link>
+                                </DropdownMenuItem>
+                                <DropdownMenuItem>
+                                    <Link href="https://emaiconference.com/2023/index.html" target="_blank">
+                                        2023
+                                    </Link>
+                                </DropdownMenuItem>
+                                <DropdownMenuItem>
+                                    <Link href="https://emaiconference.com/2022/index.html " target="_blank">
+                                        2022
+                                    </Link>
+                                </DropdownMenuItem>
+                            </DropdownMenuContent>
+                        </DropdownMenu>
                     </li>
                 </ul>
 
                 {/* Mobile Menu Button */}
                 <div className="sm:hidden">
-                    <Sheet>
+                    <Sheet open={isOpen} onOpenChange={setIsOpen}>
                         <SheetTrigger asChild>
                             <button className="text-white p-2 hover:bg-transparent rounded-lg cursor-pointer">
                                 <Menu size={24} />
@@ -88,27 +113,44 @@ export default function Navbar() {
                         </SheetTrigger>
                         <SheetContent side="right" className="bg-brand-red pl-6">
                             <div className="mt-6 flex flex-col space-y-4 font-montserrat">
-                                <Link href="/#" className="text-white hover:text-brand-yellow">
+                                <Link href="#about" className="text-white hover:text-brand-yellow" onClick={handleCloseMenu} >
                                     About
                                 </Link>
-                                <Link href="/#" className="text-white hover:text-brand-yellow">
+                                <Link href="/#" className="text-white hover:text-brand-yellow" onClick={handleCloseMenu} >
                                     Speakers
                                 </Link>
-                                <Link href="/#" className="text-white hover:text-brand-yellow">
+                                <Link href="/#" className="text-white hover:text-brand-yellow" onClick={handleCloseMenu} >
                                     Schedule
                                 </Link>
-                                <Link href="/#" className="text-white hover:text-brand-yellow">
+                                <Link href="#packages" className="text-white hover:text-brand-yellow" onClick={handleCloseMenu} >
                                     Packages
                                 </Link>
-                                <Link href="/#" className="text-white hover:text-brand-yellow">
+                                <Link href="#showcase" className="text-white hover:text-brand-yellow" onClick={handleCloseMenu} >
                                     Showcase
                                 </Link>
-                                <Link href="/#" className="text-white hover:text-brand-yellow">
+                                <Link href="#sponsors" className="text-white hover:text-brand-yellow" onClick={handleCloseMenu} >
                                     Sponsors
                                 </Link>
-                                <Link href="/#" className="text-white hover:text-brand-yellow">
-                                    Previous
-                                </Link>
+                                <div className="flex flex-col space-y-2">
+                                    <button className="flex items-center justify-between w-full text-white hover:text-brand-yellow text-left" onClick={() => setShowPrevious(!showPrevious)}>
+                                        <span>Previous</span>
+                                        {showPrevious ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
+                                    </button>
+
+                                    {showPrevious && (
+                                        <div className="flex flex-col pl-4 text-sm space-y-3">
+                                            <Link href="https://emaiconference.com/index.html" target="_blank" className="flex items-center gap-2 text-white hover:text-brand-yellow" onClick={handleCloseMenu}>
+                                                2024 <ExternalLink size={14} />
+                                            </Link>
+                                            <Link href="https://emaiconference.com/2023/index.html" target="_blank" className="flex items-center gap-2 text-white hover:text-brand-yellow" onClick={handleCloseMenu}>
+                                                2023 <ExternalLink size={14} />
+                                            </Link>
+                                            <Link href="https://emaiconference.com/2022/index.html" target="_blank" className="flex items-center gap-2 text-white hover:text-brand-yellow" onClick={handleCloseMenu}>
+                                                2022 <ExternalLink size={14} />
+                                            </Link>
+                                        </div>
+                                    )}
+                                </div>
                             </div>
 
                             {/* social media icons  */}
