@@ -21,7 +21,7 @@ export default function Stats() {
     return (
         <div ref={ref} className='max-w-7xl mx-auto px-4'>
 
-            <p className="text-3xl font-bold text-brand-yellow font-jingleberry mb-3">Women in AI Breakfast metrics</p>
+            <p className="text-3xl font-bold text-brand-yellow font-montserrat mb-3">Women in AI Breakfast metrics</p>
 
             <div className="grid grid-cols-1 sm:grid-cols-4 gap-6 mx-auto mb-14">
                 {stats.map((stat, i) => (

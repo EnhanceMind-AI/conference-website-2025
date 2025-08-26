@@ -23,7 +23,7 @@ export default function HistoryTimeline() {
         <div className="max-w-7xl mx-auto px-4 py-12">
             {/* Header */}
             <div className="mb-10">
-                <h1 className="text-left text-4xl sm:text-5xl text-brand-yellow font-jingleberry mb-4">Women in AI Breakfast</h1>
+                <h1 className="text-left text-4xl sm:text-5xl text-brand-red font-montserrat font-semibold mb-4">Women in AI Breakfast</h1>
 
                 <p className="text-brand-gray font-montserrat text-lg mb-4">
                     Since 2024, the Women in AI Breakfast is a featured sub-event under the EnhanceMind AI Conference, designed to celebrate, elevate, and empower women driving innovation in Artificial Intelligence and related technologies.

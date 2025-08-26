@@ -17,11 +17,11 @@ const fadeUp: Variants = {
 
 export default function What2Expect() {
     return (
-        <div className="relative w-full pt-14 bg-gradient-to-b from-[#da0808] via-[#fefefe] to-white">
+        <div className="relative w-full pt-14 bg-gradient-to-b from-[#da0808] to-[#1B1B1B]">
             <div className='max-w-7xl mx-auto px-4'>
                 <div className="what2expect">
-                    <h2 className="text-center text-4xl sm:text-5xl text-brand-yellow font-jingleberry">What to Expect at EMAI Conference 2025?</h2>
-                    <p className="text-brand-gray text-lg mt-4 font-montserrat">
+                    <h2 className="text-center text-4xl sm:text-5xl text-brand-yellow font-montserrat font-semibold">What to Expect at EMAI Conference 2025?</h2>
+                    <p className="text-white text-lg mt-4 font-montserrat">
                         At the heart of every great conference is the chance to connect  and this one is no different.
                         Whether you&apos;re a curious student, a seasoned engineer, or an industry expert, the EmAI Conference offers a rare space to meet fellow thinkers, makers, and visionaries.
                         Share ideas over coffee, find potential collaborators, or simply get inspired by the people around you.
@@ -35,7 +35,7 @@ export default function What2Expect() {
                         <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.2 }}>
                             <Card className="bg-white backdrop-blur-sm max-w-sm rounded-none mb-12 cursor-pointer shadow-sm transform transition duration-300 hover:scale-105 hover:shadow-2xl">
                                 <CardHeader>
-                                    <CardTitle className="text-xl sm:text-2xl text-center text-brand-red font-jingleberry">Inspiring Talks & Panel Sessions</CardTitle>
+                                    <CardTitle className="text-xl text-center text-brand-red font-montserrat">Inspiring Talks & Panel Sessions</CardTitle>
                                 </CardHeader>
                                 <CardContent>
                                     <p className="text-brand-gray font-montserrat">
@@ -49,7 +49,7 @@ export default function What2Expect() {
                         <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.2 }}>
                             <Card className="bg-white backdrop-blur-md max-w-sm w-full text-[#0F0A43] rounded-none mb-12 cursor-pointer shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl">
                                 <CardHeader>
-                                    <CardTitle className="text-xl sm:text-2xl text-center text-brand-red font-jingleberry">Innovative Project Showcases</CardTitle>
+                                    <CardTitle className="text-xl text-center text-brand-red font-montserrat">Innovative Project Showcases</CardTitle>
                                 </CardHeader>
                                 <CardContent>
                                     <p className="text-brand-gray font-montserrat">
@@ -64,7 +64,7 @@ export default function What2Expect() {
                         <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.2 }}>
                             <Card className="bg-white backdrop-blur-md max-w-sm w-full text-[#0F0A43] rounded-none mb-12 cursor-pointer shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl">
                                 <CardHeader>
-                                    <CardTitle className="text-xl sm:text-2xl text-center text-brand-red font-jingleberry">Hands-On Technical Workshops</CardTitle>
+                                    <CardTitle className="text-xl text-center text-brand-red font-montserrat">Hands-On Technical Workshops</CardTitle>
                                 </CardHeader>
                                 <CardContent>
                                     <p className="text-brand-gray font-montserrat">

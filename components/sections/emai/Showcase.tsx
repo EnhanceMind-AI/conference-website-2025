@@ -19,7 +19,7 @@ export default function Showcase() {
         <section id="showcase">
             <div className="max-w-7xl mx-auto px-4 py-10">
                 {/* Page Title */}
-                <h1 className="text-4xl sm:text-5xl text-left text-brand-yellow font-jingleberry mb-8">
+                <h1 className="text-4xl sm:text-5xl text-left text-brand-yellow font-montserrat font-semibold mb-8">
                     Showcase
                 </h1>
 
