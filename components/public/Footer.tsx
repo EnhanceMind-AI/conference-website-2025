@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { FaXTwitter, FaLinkedin } from "react-icons/fa6"
 import { MapPinned, Instagram, Youtube, Mail, Copyright } from 'lucide-react'
+import { Button } from '../ui/button'
 
 export default function Footer() {
   return (
@@ -41,8 +42,11 @@ export default function Footer() {
             </div>
 
             <div className="flex items-center space-x-2 text-white/70">
-              <Copyright size={16} />
-              <p>2025</p><Link href="/team" className="text-brand-yellow animate-pulse">EMAI Team.</Link>
+              <Copyright size={18} />
+              <p>2025</p>
+              <Button variant="default" className='bg-brand-yellow text-brand-gray rounded-full hover:bg-brand-yellow/90'>
+                <Link href="/team" className="">EMAI Team</Link>
+              </Button>
             </div>
           </div>
 

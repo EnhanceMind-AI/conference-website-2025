@@ -22,7 +22,7 @@ export default function Packages() {
     <section id="packages">
       <div className="max-w-7xl mx-auto px-4 py-10">
         {/* Section Heading */}
-        <h2 className="text-4xl sm:text-5xl font-bold text-center text-brand-yellow font-jingleberry mb-10">Available Packages</h2>
+        <h2 className="text-4xl sm:text-5xl text-center text-brand-red font-montserrat font-semibold mb-10">Available Packages</h2>
 
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 md:gap-20 justify-items-center">
@@ -38,7 +38,7 @@ export default function Packages() {
               <CardHeader className="px-6 pt-6">
                 <CardTitle className="text-white text-center text-2xl font-jingleberry">
                   <p className="text-3xl">Standard Package</p>
-                  Tshs 50,000/=
+                  Tshs 80,000/=
                 </CardTitle>
               </CardHeader>
               <CardContent className="px-6">
@@ -72,7 +72,7 @@ export default function Packages() {
               <CardHeader className="px-6 pt-6">
                 <CardTitle className="text-white text-center text-2xl font-jingleberry">
                   <p className="text-3xl"> Premium Package</p>
-                  Tshs 100,000/=
+                  Tshs 160,000/=
                 </CardTitle>
               </CardHeader>
               <CardContent className="px-6">

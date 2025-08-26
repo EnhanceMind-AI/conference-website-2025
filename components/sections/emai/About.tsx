@@ -33,14 +33,26 @@ export default function About() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
 
                     <div className="about">
-                        <h1 className='text-left text-4xl sm:text-5xl text-brand-yellow font-jingleberry mb-2'>About EMAI Conference</h1>
+                        <h1 className='text-left text-4xl sm:text-5xl text-brand-red font-montserrat font-semibold mb-2'>About EMAI Conference</h1>
 
-                        <p className='text-brand-gray text-justify text-lg font-montserrat mb-5'>
-                            Since 2022, EnhanceMind AI(EMAI) Conference has been an annual event dedicated to exploring the fundamentals, emerging trends, and groundbreaking breakthroughs in Artificial Intelligence(AI).
+                        <p className="text-brand-gray text-justify text-lg font-montserrat mb-5">
+                            Since 2022, EnhanceMind AI (EMAI) Conference has been an annual event dedicated to exploring the fundamentals, emerging trends, and groundbreaking breakthroughs in Artificial Intelligence (AI).
                             Now a recognized hub for innovation, thought leadership, and collaboration, the conference stands as a premier platform for technologists, entrepreneurs, researchers, and professionals across industries.
                             Each year, the EMAI Conference attracts a diverse audience, from data scientists and AI engineers to business leaders and startup founders who are eager to dive into the latest developments in AI, Machine Learning, Generative AI, and Data Science.
-                            As part of this year&apos;s diverse and inclusive programming, the conference will also feature special segments such as the <Link href="/women-in-ai" className="text-brand-red">Women in AI Breakfast</Link> a space dedicated to celebrating and empowering women driving change in the AI field.
                         </p>
+
+                        <div className="mt-4">
+                            <p className="text-brand-gray text-justify text-lg font-montserrat">
+                                As part of this year&apos;s diverse and inclusive programming, the conference will also feature special segments such as:
+                                <span className="font-semibold"> Women in AI Breakfast</span> a space dedicated to celebrating and empowering women driving change in the AI field.
+                            </p>
+                            <Link href="/women-in-ai">
+                                <button className="mt-3 px-6 py-2 bg-brand-red text-white font-semibold rounded-lg hover:bg-red-700 transition cursor-pointer">
+                                    See More
+                                </button>
+                            </Link>
+                        </div>
+
                     </div>
 
                     <motion.div className="flex justify-center items-center relative h-[500px] w-full" initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.5 }}>

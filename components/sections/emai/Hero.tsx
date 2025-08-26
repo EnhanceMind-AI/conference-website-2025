@@ -34,7 +34,7 @@ export default function Hero() {
             <div className="relative max-w-7xl mx-auto px-4 text-center">
 
                 {/* Main Heading */}
-                <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white font-jingleberry drop-shadow-lg">EnhanceMind AI 2025 Conference</h1>
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white font-montserrat drop-shadow-lg">EnhanceMind AI 2025 Conference</h1>
 
                 {/* Sub Heading (Typewriter Effect) */}
                 <div className="text-lg sm:text-2xl text-brand-yellow mt-4 font-montserrat">
@@ -66,7 +66,7 @@ export default function Hero() {
                     { text: "Dar Es Salaam", icon: <MapPinned className="size-10 text-white" /> },
                 ].map((item, index) => (
                     <motion.div key={index} custom={index} variants={cardVariants} transition={{ delay: index * 0.3 }} >
-                        <Card key={index} className="bg-brand-gray rounded-xl shadow-xl hover:shadow-2xl transition-transform hover:scale-105 border-t-4 border-brand-yellow" >
+                        <Card key={index} className="bg-transparent backdrop-blur-md rounded-xl shadow-xl hover:shadow-2xl transition-transform hover:scale-105 border-t-2 border-b-2 border-l-2 border-r-2 border-brand-yellow" >
                             <CardContent className="flex items-center justify-between px-6 py-5 font-montserrat">
                                 <p className="text-lg sm:text-xl font-semibold text-white font-montserrat">{item.text}</p>
                                 {item.icon}
