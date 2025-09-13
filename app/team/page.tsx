@@ -1,5 +1,5 @@
 import React from 'react'
-import { Smile } from 'lucide-react';
+import Link from 'next/link'
 import Image from 'next/image';
 import zephania from '../../public/1.svg'
 import maryat from '../../public/2.svg'
@@ -12,6 +12,8 @@ import elishaN from '../../public/8.svg'
 import gilbert from '../../public/9.svg'
 import julieth from '../../public/10.svg'
 import suzan from '../../public/11.svg'
+import { Smile, Instagram } from 'lucide-react'
+import { FaXTwitter, FaLinkedin } from 'react-icons/fa6'
 
 export default function Team() {
     return (
@@ -40,9 +42,17 @@ export default function Team() {
 
                     {/* Placeholder for social icons */}
                     <div className="flex gap-3">
-                        <span className="w-8 h-8 bg-brand-yellow rounded-full"></span>
-                        <span className="w-8 h-8 bg-brand-yellow rounded-full"></span>
-                        <span className="w-8 h-8 bg-brand-yellow rounded-full"></span>
+                        <span className="w-8 h-8 bg-brand-yellow rounded-full flex items-center justify-center transition-colors">
+                            <Link href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                                <Instagram size={20} className='text-brand-gray cursor-pointer' />
+                            </Link>
+                        </span>
+
+                        <span className="w-8 h-8 bg-brand-yellow rounded-full flex items-center justify-center transition-colors">
+                            <Link href="https://www.linkedin.com/in/zephania-reuben-a42233185" target="_blank" rel="noopener noreferrer">
+                                <FaLinkedin size={20} className='text-brand-gray cursor-pointer' />
+                            </Link>
+                        </span>
                     </div>
                 </div>
 
@@ -61,9 +71,17 @@ export default function Team() {
 
                     {/* Placeholder for social icons */}
                     <div className="flex gap-3">
-                        <span className="w-8 h-8 bg-brand-yellow rounded-full"></span>
-                        <span className="w-8 h-8 bg-brand-yellow rounded-full"></span>
-                        <span className="w-8 h-8 bg-brand-yellow rounded-full"></span>
+                        <span className="w-8 h-8 bg-brand-yellow rounded-full flex items-center justify-center transition-colors">
+                            <Link href="https://www.instagram.com/mulmul_aryat" target="_blank" rel="noopener noreferrer">
+                                <Instagram size={20} className='text-brand-gray cursor-pointer' />
+                            </Link>
+                        </span>
+
+                        <span className="w-8 h-8 bg-brand-yellow rounded-full flex items-center justify-center transition-colors">
+                            <Link href="https://www.linkedin.com/in/maryat-hussein-9514a9215" target="_blank" rel="noopener noreferrer">
+                                <FaLinkedin size={20} className='text-brand-gray cursor-pointer' />
+                            </Link>
+                        </span>
                     </div>
                 </div>
 
@@ -82,9 +100,17 @@ export default function Team() {
 
                     {/* Placeholder for social icons */}
                     <div className="flex gap-3">
-                        <span className="w-8 h-8 bg-brand-yellow rounded-full"></span>
-                        <span className="w-8 h-8 bg-brand-yellow rounded-full"></span>
-                        <span className="w-8 h-8 bg-brand-yellow rounded-full"></span>
+                        <span className="w-8 h-8 bg-brand-yellow rounded-full flex items-center justify-center transition-colors">
+                            <Link href="https://www.instagram.com/elisha.kindars" target="_blank" rel="noopener noreferrer">
+                                <Instagram size={20} className='text-brand-gray cursor-pointer' />
+                            </Link>
+                        </span>
+
+                        <span className="w-8 h-8 bg-brand-yellow rounded-full flex items-center justify-center transition-colors">
+                            <Link href="https://www.linkedin.com/in/elisha-kinders" target="_blank" rel="noopener noreferrer">
+                                <FaLinkedin size={20} className='text-brand-gray cursor-pointer' />
+                            </Link>
+                        </span>
                     </div>
                 </div>
 
@@ -103,9 +129,17 @@ export default function Team() {
 
                     {/* Placeholder for social icons */}
                     <div className="flex gap-3">
-                        <span className="w-8 h-8 bg-brand-yellow rounded-full"></span>
-                        <span className="w-8 h-8 bg-brand-yellow rounded-full"></span>
-                        <span className="w-8 h-8 bg-brand-yellow rounded-full"></span>
+                        <span className="w-8 h-8 bg-brand-yellow rounded-full flex items-center justify-center transition-colors">
+                            <Link href="https://www.instagram.com/me_tamyyyyyyy" target="_blank" rel="noopener noreferrer">
+                                <Instagram size={20} className='text-brand-gray cursor-pointer' />
+                            </Link>
+                        </span>
+
+                        <span className="w-8 h-8 bg-brand-yellow rounded-full flex items-center justify-center transition-colors">
+                            <Link href="https://www.linkedin.com/in/tamara-andrew-b6a766369" target="_blank" rel="noopener noreferrer">
+                                <FaLinkedin size={20} className='text-brand-gray cursor-pointer' />
+                            </Link>
+                        </span>
                     </div>
                 </div>
 
@@ -124,30 +158,17 @@ export default function Team() {
 
                     {/* Placeholder for social icons */}
                     <div className="flex gap-3">
-                        <span className="w-8 h-8 bg-brand-yellow rounded-full"></span>
-                        <span className="w-8 h-8 bg-brand-yellow rounded-full"></span>
-                        <span className="w-8 h-8 bg-brand-yellow rounded-full"></span>
-                    </div>
-                </div>
+                        <span className="w-8 h-8 bg-brand-yellow rounded-full flex items-center justify-center transition-colors">
+                            <Link href="https://www.instagram.com/its_becky21" target="_blank" rel="noopener noreferrer">
+                                <Instagram size={20} className='text-brand-gray cursor-pointer' />
+                            </Link>
+                        </span>
 
-
-                {/* Luciana Severine */}
-                <div className="bg-white p-5 rounded-lg shadow-lg flex flex-col items-center">
-                    <Image
-                        src={luciana}
-                        alt="Marketing Manager"
-                        width="300"
-                        height="300"
-                        className="rounded-full object-cover mb-4"
-                    />
-                    <h2 className="text-xl font-bold text-brand-red font-montserrat">Luciana Severine</h2>
-                    <p className="text-brand-gray font-montserrat mb-3">Marketing Manager</p>
-
-                    {/* Placeholder for social icons */}
-                    <div className="flex gap-3">
-                        <span className="w-8 h-8 bg-brand-yellow rounded-full"></span>
-                        <span className="w-8 h-8 bg-brand-yellow rounded-full"></span>
-                        <span className="w-8 h-8 bg-brand-yellow rounded-full"></span>
+                        <span className="w-8 h-8 bg-brand-yellow rounded-full flex items-center justify-center transition-colors">
+                            <Link href="https://www.linkedin.com/in/rebeca-joshua-b17a18271" target="_blank" rel="noopener noreferrer">
+                                <FaLinkedin size={20} className='text-brand-gray cursor-pointer' />
+                            </Link>
+                        </span>
                     </div>
                 </div>
 
@@ -166,30 +187,17 @@ export default function Team() {
 
                     {/* Placeholder for social icons */}
                     <div className="flex gap-3">
-                        <span className="w-8 h-8 bg-brand-yellow rounded-full"></span>
-                        <span className="w-8 h-8 bg-brand-yellow rounded-full"></span>
-                        <span className="w-8 h-8 bg-brand-yellow rounded-full"></span>
-                    </div>
-                </div>
+                        <span className="w-8 h-8 bg-brand-yellow rounded-full flex items-center justify-center transition-colors">
+                            <Link href="https://www.instagram.com/just_jo.es" target="_blank" rel="noopener noreferrer">
+                                <Instagram size={20} className='text-brand-gray cursor-pointer' />
+                            </Link>
+                        </span>
 
-
-                {/* Elisha Nsonjo  */}
-                <div className="bg-white p-5 rounded-lg shadow-lg flex flex-col items-center">
-                    <Image
-                        src={elishaN}
-                        alt="Business Development Manager"
-                        width="300"
-                        height="300"
-                        className="rounded-full object-cover mb-4"
-                    />
-                    <h2 className="text-xl font-bold text-brand-red font-montserrat">Elisha Nsonjo</h2>
-                    <p className="text-brand-gray font-montserrat mb-3">Business Development Manager</p>
-
-                    {/* Placeholder for social icons */}
-                    <div className="flex gap-3">
-                        <span className="w-8 h-8 bg-brand-yellow rounded-full"></span>
-                        <span className="w-8 h-8 bg-brand-yellow rounded-full"></span>
-                        <span className="w-8 h-8 bg-brand-yellow rounded-full"></span>
+                        <span className="w-8 h-8 bg-brand-yellow rounded-full flex items-center justify-center transition-colors">
+                            <Link href="https://www.linkedin.com/in/johari-bakari-655632207" target="_blank" rel="noopener noreferrer">
+                                <FaLinkedin size={20} className='text-brand-gray cursor-pointer' />
+                            </Link>
+                        </span>
                     </div>
                 </div>
 
@@ -208,9 +216,17 @@ export default function Team() {
 
                     {/* Placeholder for social icons */}
                     <div className="flex gap-3">
-                        <span className="w-8 h-8 bg-brand-yellow rounded-full"></span>
-                        <span className="w-8 h-8 bg-brand-yellow rounded-full"></span>
-                        <span className="w-8 h-8 bg-brand-yellow rounded-full"></span>
+                        <span className="w-8 h-8 bg-brand-yellow rounded-full flex items-center justify-center transition-colors">
+                            <Link href="https://www.instagram.com/gilbertmunuotz" target="_blank" rel="noopener noreferrer">
+                                <Instagram size={20} className='text-brand-gray cursor-pointer' />
+                            </Link>
+                        </span>
+
+                        <span className="w-8 h-8 bg-brand-yellow rounded-full flex items-center justify-center transition-colors">
+                            <Link href="https://www.x.com/gilbertmunuotz" target="_blank" rel="noopener noreferrer">
+                                <FaXTwitter size={20} className='text-brand-gray cursor-pointer' />
+                            </Link>
+                        </span>
                     </div>
                 </div>
 
@@ -229,9 +245,17 @@ export default function Team() {
 
                     {/* Placeholder for social icons */}
                     <div className="flex gap-3">
-                        <span className="w-8 h-8 bg-brand-yellow rounded-full"></span>
-                        <span className="w-8 h-8 bg-brand-yellow rounded-full"></span>
-                        <span className="w-8 h-8 bg-brand-yellow rounded-full"></span>
+                        <span className="w-8 h-8 bg-brand-yellow rounded-full flex items-center justify-center transition-colors">
+                            <Link href="https://www.instagram.com/julieth_koku" target="_blank" rel="noopener noreferrer">
+                                <Instagram size={20} className='text-brand-gray cursor-pointer' />
+                            </Link>
+                        </span>
+
+                        <span className="w-8 h-8 bg-brand-yellow rounded-full flex items-center justify-center transition-colors">
+                            <Link href="https://www.linkedin.com/in/julieth-mwesigwa" target="_blank" rel="noopener noreferrer">
+                                <FaLinkedin size={20} className='text-brand-gray cursor-pointer' />
+                            </Link>
+                        </span>
                     </div>
                 </div>
 
@@ -250,9 +274,17 @@ export default function Team() {
 
                     {/* Placeholder for social icons */}
                     <div className="flex gap-3">
-                        <span className="w-8 h-8 bg-brand-yellow rounded-full"></span>
-                        <span className="w-8 h-8 bg-brand-yellow rounded-full"></span>
-                        <span className="w-8 h-8 bg-brand-yellow rounded-full"></span>
+                        <span className="w-8 h-8 bg-brand-yellow rounded-full flex items-center justify-center transition-colors">
+                            <Link href="https://www.instagram.com/suesembuli" target="_blank" rel="noopener noreferrer">
+                                <Instagram size={20} className='text-brand-gray cursor-pointer' />
+                            </Link>
+                        </span>
+
+                        <span className="w-8 h-8 bg-brand-yellow rounded-full flex items-center justify-center transition-colors">
+                            <Link href=" https://www.linkedin.com/in/cpa-t-cop-sue-s-1856b4188" target="_blank" rel="noopener noreferrer">
+                                <FaLinkedin size={20} className='text-brand-gray cursor-pointer' />
+                            </Link>
+                        </span>
                     </div>
                 </div>
             </div>

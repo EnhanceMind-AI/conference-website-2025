@@ -44,7 +44,7 @@ export default function Footer() {
             <div className="flex items-center space-x-2 text-white/70">
               <Copyright size={18} />
               <p>2025</p>
-              <Button variant="default" className='bg-brand-yellow text-brand-gray rounded-full hover:bg-brand-yellow/90'>
+              <Button variant="default" className='bg-brand-yellow/75 text-brand-gray rounded-full hover:bg-brand-yellow/90'>
                 <Link href="/team" className="">EMAI Team</Link>
               </Button>
             </div>
