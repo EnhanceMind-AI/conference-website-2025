@@ -2,7 +2,7 @@ import { Button } from "../../ui/button"
 import CTAsvg from "../../../public/CTA.svg"
 import Image from "next/image"
 import Link from "next/link"
-import CTABg from "../../../public/CTABg.svg"
+import CTABg from "../../../public/CTABg.png"
 
 
 export default function CTABanner() {
@@ -31,7 +31,7 @@ export default function CTABanner() {
 
 
                     {/* Heading */}
-                    <h2 className="text-4xl sm:text-5xl font-extrabold text-brand-yellow font-jingleberry">
+                    <h2 className="text-4xl sm:text-5xl font-extrabold text-brand-yellow font-montserrat">
                         Join EnhanceMind AI 2025
                     </h2>
 
