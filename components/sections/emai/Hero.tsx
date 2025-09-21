@@ -63,7 +63,7 @@ export default function Hero() {
                 {[
                     { text: "All Invited", icon: <UsersRound className="size-10 text-white" /> },
                     { text: "25th - 27th September 2025", icon: <CalendarDays className="size-10 text-white" /> },
-                    { text: "Dar Es Salaam", icon: <MapPinned className="size-10 text-white" /> },
+                    { text: "SeedSpace Dar Es Salaam", icon: <MapPinned className="size-10 text-white" /> },
                 ].map((item, index) => (
                     <motion.div key={index} custom={index} variants={cardVariants} transition={{ delay: index * 0.3 }} >
                         <Card key={index} className="bg-transparent backdrop-blur-md rounded-xl shadow-xl hover:shadow-2xl transition-transform hover:scale-105 border-t-2 border-b-2 border-l-2 border-r-2 border-brand-yellow" >
