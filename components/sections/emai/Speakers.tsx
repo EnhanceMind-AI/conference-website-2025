@@ -81,24 +81,23 @@ export default function Speakers() {
                 {/* Keynote Speakers */}
                 <div className="key-note-speakers">
                     <div className="py-5">
-                        <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.2 }}>
-                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                                {keynoteSpeakers.map((speaker, index) => (
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                            {keynoteSpeakers.map((speaker, index) => (
+                                <motion.div key={index} variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.2 }}>
                                     <SpeakerCard
-                                        key={index}
                                         name={speaker.name}
                                         role={speaker.role}
                                         nation={speaker.nation}
                                         image={speaker.image}
                                         shape="circle"
                                     />
-                                ))}
-                            </div>
-                        </motion.div>
+                                </motion.div>
+                            ))}
+                        </div>
                     </div>
                 </div>
 
             </div>
-        </div>
+        </div >
     )
 }
