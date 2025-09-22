@@ -1,9 +1,18 @@
+'use client'
+
 import Link from 'next/link'
 import { FaXTwitter, FaLinkedin } from "react-icons/fa6"
 import { MapPinned, Instagram, Youtube, Mail, Copyright } from 'lucide-react'
 import { Button } from '../ui/button'
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@radix-ui/react-dropdown-menu';
 
 export default function Footer() {
+
+  const placeName = "Seedspace Dar es Salaam";
+  const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(placeName)}&query=-6.778841991951824,39.25265973220905`;
+  const appleMapsUrl = "http://maps.apple.com/?ll=-6.778841991951824,39.25265973220905&q=Seedspace+Dar+es+Salaam";
+
+
   return (
     <footer className="bg-brand-gray text-white py-24 font-montserrat">
       <div className="max-w-7xl mx-auto px-4">
@@ -16,8 +25,23 @@ export default function Footer() {
             </p>
 
             <div className="flex items-center space-x-2 text-white/80">
-              <MapPinned size={30} className="text-[#da0808]" />
-              <p>Dar Es Salaam, Tanzania.</p>
+              <MapPinned size={40} className="text-brand-red/80" />
+              {/* Dropdown for Maps */}
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button className="bg-brand-yellow cursor-pointer text-brand-gray hover:bg-brand-yellow/90 rounded-full">
+                    Open in Maps
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="bg-brand-gray text-white">
+                  <DropdownMenuItem onClick={() => window.open(googleMapsUrl, "_blank")} className='cursor-pointer rounded-full hover:bg-gray-100/50 px-3 py-2'>
+                    Google Maps
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={() => window.open(appleMapsUrl, "_blank")} className='cursor-pointer rounded-full hover:bg-gray-100/50 px-3 py-2'>
+                    Apple Maps
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
             </div>
           </div>
 
@@ -44,7 +68,7 @@ export default function Footer() {
             <div className="flex items-center space-x-2 text-white/70">
               <Copyright size={18} />
               <p>2025</p>
-              <Button variant="default" className='bg-brand-yellow/75 text-brand-gray rounded-full hover:bg-brand-yellow/90'>
+              <Button variant="default" className='bg-brand-yellow text-brand-gray rounded-full hover:bg-brand-yellow/90'>
                 <Link href="/team" className="">EMAI Team</Link>
               </Button>
             </div>
