@@ -1,7 +1,7 @@
 import Hero from "@/components/sections/emai/Hero"
 import About from "@/components/sections/emai/About"
 import Packages from "@/components/sections/emai/Packages"
-// import Schedule from "@/components/sections/Schedule"
+import Schedule from "@/components/sections/emai/Schedule"
 import Speakers from "@/components/sections/emai/Speakers"
 import Sponsors from "@/components/sections/emai/Sponsors"
 import CTABanner from "@/components/sections/emai/CTA-Banner"
@@ -19,7 +19,7 @@ export default function Home() {
       <Stats />
       <What2Expect />
       <Speakers />
-      {/* <Schedule /> */}
+      <Schedule />
       <Packages />
       <Showcase />
       <CTABanner />

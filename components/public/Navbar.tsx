@@ -58,7 +58,7 @@ export default function Navbar() {
                         </Link>
                     </li>
                     <li>
-                        <Link href="/#" className="text-brand-yellow hover:text-brand-yellow">
+                        <Link href="#schedule" className="text-brand-yellow hover:text-brand-yellow">
                             Schedule
                         </Link>
                     </li>
@@ -119,7 +119,7 @@ export default function Navbar() {
                                 <Link href="#speakers" className="text-white hover:text-brand-yellow" onClick={handleCloseMenu} >
                                     Speakers
                                 </Link>
-                                <Link href="/#" className="text-white hover:text-brand-yellow" onClick={handleCloseMenu} >
+                                <Link href="#schedule" className="text-white hover:text-brand-yellow" onClick={handleCloseMenu} >
                                     Schedule
                                 </Link>
                                 <Link href="#packages" className="text-white hover:text-brand-yellow" onClick={handleCloseMenu} >
