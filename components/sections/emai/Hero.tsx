@@ -34,7 +34,7 @@ export default function Hero() {
             <div className="relative max-w-7xl mx-auto px-4 text-center">
 
                 {/* Main Heading */}
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white font-montserrat drop-shadow-lg">EnhanceMind AI 2025 Conference</h1>
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white font-montserrat drop-shadow-lg">EnhanceMind AI Conference 2025</h1>
 
                 {/* Sub Heading (Typewriter Effect) */}
                 <div className="text-lg sm:text-2xl text-brand-yellow mt-4 font-montserrat">
